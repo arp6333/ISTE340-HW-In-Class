@@ -1,0 +1,12 @@
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\obj\Debug\ISTE340ConsumeServices.csprojAssemblyReference.cache
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\obj\Debug\ISTE340ConsumeServices.frmServices.resources
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\obj\Debug\ISTE340ConsumeServices.Properties.Resources.resources
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\obj\Debug\ISTE340ConsumeServices.csproj.GenerateResource.cache
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\obj\Debug\ISTE340ConsumeServices.csproj.CoreCompileInputs.cache
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\bin\Debug\ISTE340ConsumeServices.exe.config
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\bin\Debug\ISTE340ConsumeServices.exe
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\bin\Debug\ISTE340ConsumeServices.pdb
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\bin\Debug\CookComputing.XmlRpcV2.dll
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\obj\Debug\ISTE340ConsumeServices.csproj.CopyComplete
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\obj\Debug\ISTE340ConsumeServices.exe
+C:\Users\ellie\Downloads\ISTE340ConsumeServices\ISTE340ConsumeServices\obj\Debug\ISTE340ConsumeServices.pdb
