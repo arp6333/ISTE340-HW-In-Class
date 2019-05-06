@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Storage Example</title>
+	<script type="text/javascript" src="cookies.js"></script>
+	
+	<script>
+		var IE8orLess = false;
+	</script>
+	
+	<!--[if IE]>
+		<script type="text/javascript">
+			IE8orLess=true;
+		</script>
+	<![endif]-->
+	
+	<script>
+		console.log('IE 8 or less = '+IE8orLess);
+		if( IE8orLess || !document.getElementById ){
+			alert("This is an old browser. To use this page get a new one");
+			window.document.location.href="http://outdatedbrowser.com/en";
+		}
+	</script>
+	
+	
+	<script type="text/javascript">
+		////////////////////////////Careful - does not work on file:// (MUST upload to gibson)
+		////////////////////////////Also - Though testing as IE7 in IE9 says localStorage works, it does NOT
+		//localStorage
+
+		function checkColor( whatColor ){
+
+			if( window.localStorage ){
+				localStorage.setItem('color',whatColor);
+			}
+	
+			if( localStorage.getItem('color') ) {
+				// if it exists, set the background color
+				document.getElementsByTagName('body')[0].style.background = 
+							localStorage.getItem('color');
+			}
+			
+			// Print what is stored
+			for( var key in localStorage){
+				console.log(key +' = '+localStorage.getItem(key));
+			}
+		
+		} // end checkColor
+		
+		function clearIt(){
+			localStorage.removeItem('color');
+                document.getElementsByTagName('body')[0].style.background='';
+		}
+		
+		//cookie
+
+		// does the cookie exists
+		if( GetCookie('user_id') == null ){
+			// null means the cookie does not exist, first time here
+			var getName=prompt("Hi! First time here, what is your name?",'');
+			document.write('<h2>Welcome, '+getName+
+				'! This is your first time here.</h2>');
+			
+			// Create this cookie for later use.
+			SetCookie('user_id',getName);
+			SetCookie('hit_count','1');
+		
+		} else {
+			// Returning visitor
+			var getName = GetCookie('user_id');
+			var getHits = GetCookie('hit_count');
+			getHits = parseInt(getHits)+1;
+			document.write('<h2>Welcome back '+getName+
+				' you have visited '+getHits+' times.');
+			
+			// update the hit count 
+			SetCookie('hit_count',getHits);
+		
+		} // if cookie 
+		
+		// Delete my cookies
+		function clearMyCookies(){
+		
+			DeleteCookie('user_id');
+			DeleteCookie('hit_count');
+			location.reload();			// Refresh/reload the page. 1st time here
+		
+		} // end clearMyCookies
+
+	</script>
+</head>
+<body onload="checkColor()">
+
+<button type="button" onclick="clearMyCookies()"
+	style="position:absolute;right:10px;top:100px;background:orange;"
+	>Delete my cookies</button>
+
+<div style="position:absolute;right:10px;bottom:10px;background:#c9c;">
+	Change your style. <span style="pointer:finger" onclick="checkColor('red')">Red</span> | 
+	<span style="cursor:pointer" onclick="checkColor('green')">Green</span> | 
+	<span style="cursor:pointer" onclick="clearIt()">Clear</span>
+</div>
+</body>
+</html>
